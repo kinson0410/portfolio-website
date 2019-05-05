@@ -1,0 +1,284 @@
+:root {
+  --primary-color: #4ba633;
+  --secondary-color: #e57d3a;
+  --primary-color-light:#e7f5e5;
+  --dark-grey: #55575a;
+  --black: #000;
+  --light-grey:#f5f5f5;
+  --link-hover-color:#1f7409;
+  --link-active-color:#00625c;
+  --standard-font-weight:400;
+  --bold-font-weight:700;
+
+}
+
+* {
+  box-sizing: border-box;
+}
+
+header {
+  background-color: white;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+}
+
+.page-header {
+  display: flex;
+  width: 100%;
+  padding: 12px;
+}
+
+.page-header_item {
+  flex: 0 1 115 px;
+  margin: 2px;
+}
+
+.page-header_item:last-child {
+  flex-grow: 1;
+  text-align: right;
+}
+
+.navigation-list {
+  list-style-type: none;
+}
+
+.navigation-list li {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+.profile_portrait {
+  float: left;
+  margin-right: 40px;
+  width: 250px;
+  height: auto;
+  border-radius: 50%;
+}
+
+.profile {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.contact {
+  max-width: 900px;
+  margin: 20px auto;
+}
+
+.contact-info {
+}
+
+.about_heading {
+  text-align: center;
+}
+.about_main{
+  max-width: 600px;
+  margin: 0 auto;
+  margin: 20px auto;
+}
+
+.about_check-botton {
+  text-align: center;
+  padding: 10px; /*add a 10 px outer spacing to all sides*/
+}
+/* Need some work here*/
+.skills_table {
+  margin:0 auto;
+  padding: 10px; /*add a 10 px outer spacing to all sides*/
+}
+
+.work_section{
+  max-width: 900px;
+  margin: 20px auto;
+}
+.page-footer {
+  clear: both;
+  display:flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+body{
+  background-color: var(--light-grey);
+  font-family:'Overpass', sans-serif;
+  font-weight:var(--standard-font-weight);
+  font-size: 16px;
+  /* Sets the font size to 16px */
+  color: var(--dark-grey);
+  /* Sets the font color to dark grey*/
+  line-height: 1.6;
+  /* Sets the line-height to 1.6 */
+}
+
+h1 {
+  font-family: 'Chivo', sans-serif;
+  font-size: 32px;
+  font-weight:var(--bold-font-weight);
+  color: var(--black);
+
+}
+
+h2 {
+  font-family: 'Chivo', sans-serif;
+  font-size: 24px;
+  font-weight:var(--bold-font-weight);
+  color: var(--black);
+}
+
+h3 {
+  font-family: 'Chivo', sans-serif;
+  font-size: 18px;
+  font-weight:var(--bold-font-weight)0;
+}
+
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+
+a:visited {
+  /* visited link */
+  color: var(--primary-color);
+}
+
+a:hover, a:focus {
+  color: var(--link-hover-color);
+}
+
+a:active {
+  /* selected link */
+  color: var(--link-active-color) ;
+}
+
+#contact-form {
+  width: 100px;
+}
+
+input {
+  width: 300px;
+}
+
+textarea {
+  width: 300px;
+}
+
+button, .button {
+/* overwrites browser defaults and resets the border */
+  border: none;
+  display: inline-block;
+/* takes the font from the outer container */
+  font-family: inherit;
+/* styles the background color, font color, and text decoration (underline, etc.) of the button */
+  background-color: var(--secondary-color);
+  color: white;
+  text-decoration: none;
+/*adds spacing to the button */
+  padding: 5px;
+  border-radius: 10px;
+/* gives the button a bottom border with a width of 2px, a type of solid, and a color in RGBA format */
+  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+  transition: 0.4s opacity;
+}
+
+button:hover,.button:hover, button:focus, .button:focus {
+/* lets the mouse appear as a hand when hovering over the button */
+  cursor: pointer;
+/* reduces the opacity of the button to 80% */
+  opacity: 0.8;
+  color: white;
+}
+
+.button__secondary {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.navigation-list__item--active {
+  text-decoration: none;
+}
+
+thead {
+  color:var(--black);
+}
+
+/* Grid fallback*/
+
+.grid__item {
+  display: inline-block;
+  width: 33%;
+}
+
+/* Styling CSS grid*/
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
+}
+
+.grid_item {
+  background-color: var(--primary-color-light);
+  padding: 10px;
+  border-radius: 15px;
+  /* Set width to auto*/
+  width: auto;
+}
+
+@media all and (max-width: 500px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+@media all and (min-width: 500px) and (max-width: 750px){
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media all and (max-width: 750px) {
+  .grid {
+    grid-gap: 10px;
+  }
+  .grid__item:last-child {
+    grid-column: auto / auto;
+    grid-row: auto / auto;
+  }
+  h1 {
+    font-size: 22px;
+  }
+  h2 {
+    font-size: 20px;
+  }
+}
+
+
+@keyframes color-change {
+  0% {
+    fill: #1d2627;
+  }
+  100% {
+    fill: #a41d2e;
+  }
+}
+
+#path2032 {
+  animation: 5s color-change infinite alternate linear;
+}
+
+#path2016 {
+  animation: 8s color-change infinite alternate linear;
+}
+
+
+@keyframes cloud-move {
+  from {
+    transform: translate(100px, 0px);
+  }
+  to {
+    transform: translate(600px, 0px);
+  }
+}
+
+#path1782 {
+  animation: 5s cloud-move infinite alternate linear;
+}
