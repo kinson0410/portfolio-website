@@ -64,7 +64,7 @@ header {
   margin: 20px auto;
 }
 
-.contact-info {
+.contact_info {
 }
 
 .about_heading {
@@ -204,7 +204,7 @@ thead {
 
 /* Grid fallback*/
 
-.grid__item {
+.grid_item {
   display: inline-block;
   width: 33%;
 }
